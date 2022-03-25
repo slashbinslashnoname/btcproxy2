@@ -28,4 +28,4 @@ WORKDIR /app/stratum-mining-proxy
 
 # Make sure we use the virtualenv:
 ENV PATH="/opt/venv/bin:$PATH"
-ENTRYPOINT ["./mining_proxy.py"]
+ENTRYPOINT ["./mining_proxy.py", "--enable-stratum-extensions"]
