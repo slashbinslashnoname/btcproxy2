@@ -353,8 +353,7 @@ class StratumProxyService(GenericService):
         if tail == None:
             raise SubmitException("Connection is not subscribed")
 
-        if self.custom_user:
-            worker_name = self.custom_user
+        print(worker_name)
 
         start = time.time()
         submit_params = [worker_name, job_id, tail+extranonce2, ntime, nonce]

@@ -225,7 +225,8 @@ class JobRegistry(object):
             
         return result            
         
-    def submit(self, header, worker_name):            
+    def submit(self, header, worker_name): 
+        print("ok") 
         # Drop unused padding
         header = header[:160]
 

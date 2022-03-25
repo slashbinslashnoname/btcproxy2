@@ -27,7 +27,6 @@ class WorkerRegistry(object):
     def authorize(self, worker_name, password):
         if worker_name in self.authorized:
             return True
-            
         if worker_name in self.unauthorized and time.time() - self.last_failure < 60:
             # Prevent flooding of mining.authorize() requests 
             log.warning("Authentication of worker '%s' with password '%s' failed, next attempt in few seconds..." % \
